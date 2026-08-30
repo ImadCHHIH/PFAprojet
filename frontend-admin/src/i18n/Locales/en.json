@@ -1,0 +1,36 @@
+{
+  "dashboard": {
+    "menu": "Dashboard",
+    "title": "Dashboard",
+    "companies": "Companies",
+    "subscriptions": "Subscriptions",
+    "revenue": "Revenue",
+    "activeSubscriptions": "Active Subscriptions"
+  },
+
+  "companies": "Companies",
+
+  "plans": {
+    "menu": "Plans",
+    "title": "Plans",
+    "addPlan": "Add Plan"
+  },
+
+  "subscriptions": "Subscriptions",
+  "users": "Users",
+  "settings": "Settings",
+  "logout": "Logout",
+
+  "appearance": "Appearance",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+
+  "language": "Language",
+  "english": "English",
+  "french": "French",
+
+  "dateFormat": "Date Format",
+  "numberFormat": "Number Format",
+  "currency": "Currency"
+}

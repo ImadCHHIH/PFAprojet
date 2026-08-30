@@ -1,0 +1,36 @@
+{
+  "dashboard": {
+    "menu": "Tableau de bord",
+    "title": "Tableau de bord",
+    "companies": "Entreprises",
+    "subscriptions": "Abonnements",
+    "revenue": "Revenus",
+    "activeSubscriptions": "Abonnements actifs"
+  },
+
+  "companies": "Entreprises",
+
+  "plans": {
+    "menu": "Plans",
+    "title": "Plans",
+    "addPlan": "Ajouter un plan"
+  },
+
+  "subscriptions": "Abonnements",
+  "users": "Utilisateurs",
+  "settings": "Paramètres",
+  "logout": "Déconnexion",
+
+  "appearance": "Apparence",
+  "theme": "Thème",
+  "light": "Clair",
+  "dark": "Sombre",
+
+  "language": "Langue",
+  "english": "Anglais",
+  "french": "Français",
+
+  "dateFormat": "Format de date",
+  "numberFormat": "Format des nombres",
+  "currency": "Devise"
+}

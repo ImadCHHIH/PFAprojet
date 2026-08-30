@@ -1,0 +1,470 @@
+/* =========================
+   THÈME & VARIABLES MODERNISÉES
+   ========================= */
+:root {
+  /* Couleurs principales - Dégradés modernes */
+  --primary: #667eea;
+  --primary-dark: #5a67d8;
+  --secondary: #764ba2;
+  --accent: #f093fb;
+  --accent-pink: #f5576c;
+  --success: #43e97b;
+  --success-light: #38f9d7;
+  --warning: #fa709a;
+  --info: #4facfe;
+  
+  /* Dégradés */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --gradient-warning: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-info: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 40%, #f093fb 70%, #f5576c 100%);
+  
+  /* Couleurs de texte */
+  --text: #6b7280;
+  --text-h: #1a1a2e;
+  --text-muted: #9ca3af;
+  --text-light: #d1d5db;
+  
+  /* Fond */
+  --bg: #f5f7fa;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-code: rgba(102, 126, 234, 0.06);
+  
+  /* Bordures */
+  --border: rgba(255, 255, 255, 0.3);
+  --border-dark: rgba(0, 0, 0, 0.06);
+  
+  /* Couleurs d'accent */
+  --accent-bg: rgba(102, 126, 234, 0.1);
+  --accent-border: rgba(102, 126, 234, 0.3);
+  --social-bg: rgba(255, 255, 255, 0.5);
+  
+  /* Ombres */
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 30px 80px rgba(102, 126, 234, 0.15);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 40px 80px rgba(0, 0, 0, 0.12);
+  
+  /* Rayons */
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-full: 9999px;
+  
+  /* Typographie */
+  --sans: system-ui, 'Segoe UI', 'Inter', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', 'Inter', Roboto, sans-serif;
+  --mono: ui-monospace, 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+  
+  /* Tailles */
+  --font-base: 18px;
+  --font-sm: 14px;
+  --font-xs: 12px;
+  
+  /* Transitions */
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s ease;
+  
+  /* Espacements */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  font: var(--font-base)/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    --font-base: 16px;
+  }
+
+  @media (max-width: 640px) {
+    --font-base: 15px;
+  }
+}
+
+/* =========================
+   THÈME SOMBRE
+   ========================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --text-muted: #6b7280;
+    --bg: #0f0f1a;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-code: rgba(102, 126, 234, 0.08);
+    --border: rgba(255, 255, 255, 0.06);
+    --border-dark: rgba(255, 255, 255, 0.04);
+    --accent-bg: rgba(102, 126, 234, 0.15);
+    --social-bg: rgba(255, 255, 255, 0.04);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 30px 80px rgba(102, 126, 234, 0.08);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --shadow-elevated: 0 40px 80px rgba(0, 0, 0, 0.5);
+    --gradient-hero: linear-gradient(135deg, #4a3f7a 0%, #5a4a8a 40%, #8a5a9a 70%, #aa6a8a 100%);
+  }
+
+  /* Inversion des icônes sociales */
+  #social .button-icon,
+  .social-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+/* =========================
+   STYLES DE BASE
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.03) 0%, transparent 50%);
+  transition: background var(--transition);
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+  overflow: hidden;
+
+  /* Effet de bordure lumineuse */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: var(--gradient-primary);
+    opacity: 0.05;
+    z-index: -1;
+    filter: blur(20px);
+  }
+
+  @media (max-width: 1024px) {
+    border-inline: none;
+    box-shadow: none;
+  }
+}
+
+/* =========================
+   TYPOGRAPHIE
+   ========================= */
+h1, h2, h3, h4 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: var(--space-8) 0;
+  background: var(--gradient-hero);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+
+  &::after {
+    content: '✨';
+    position: absolute;
+    right: -40px;
+    top: -10px;
+    font-size: 32px;
+    animation: float 4s ease-in-out infinite;
+    -webkit-text-fill-color: initial;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: var(--space-5) 0;
+    &::after {
+      font-size: 24px;
+      right: -30px;
+      top: -5px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 var(--space-2);
+  color: var(--text-h);
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+}
+
+/* =========================
+   CODE & ÉLÉMENTS MONO
+   ========================= */
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: var(--radius-sm);
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 10px;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+}
+
+/* =========================
+   COMPOSANT COUNTER AMÉLIORÉ
+   ========================= */
+.counter {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  color: #fff;
+  background: var(--gradient-primary);
+  border: none;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  transition: all var(--transition);
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '⚡';
+    margin-right: 8px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.45);
+
+    &::after {
+      transform: translateX(100%);
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+    padding: 6px 16px;
+  }
+}
+
+/* =========================
+   UTILITAIRES & ANIMATIONS
+   ========================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* =========================
+   RESPONSIVE GLOBAL
+   ========================= */
+@media (max-width: 1024px) {
+  #root {
+    border-inline: none;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+/* =========================
+   ACCESSIBILITÉ
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible pour accessibilité */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Sélection de texte */
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* =========================
+   SCROLLBAR PERSONNALISÉE
+   ========================= */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+
+  &:hover {
+    background: var(--gradient-accent);
+  }
+}
+
+/* =========================
+   BADGE DE STATUT
+   ========================= */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &.success {
+    background: rgba(67, 233, 123, 0.12);
+    color: var(--success);
+  }
+
+  &.warning {
+    background: rgba(250, 112, 154, 0.12);
+    color: var(--warning);
+  }
+
+  &.info {
+    background: rgba(79, 172, 254, 0.12);
+    color: var(--info);
+  }
+
+  &.accent {
+    background: rgba(240, 147, 251, 0.12);
+    color: var(--accent);
+  }
+}
